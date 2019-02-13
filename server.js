@@ -22,7 +22,7 @@ CORS에 x-access-token이 추가되었다.
 jwt로 생성된 토큰은 header의 x-access-token 항목을 통해 전달된다.
 */
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended : treu}));
+app.use(bodyParser.urlencoded({extended : true}));
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
