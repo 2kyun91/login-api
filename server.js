@@ -6,7 +6,7 @@ var bodyParser = require("body-parser");
 
 // DB setting
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGO_DB_LOGIN_API, {userMongoClient : true});
+mongoose.connect(process.env.MONGO_DB_LOGIN_API, {useMongoClient : true});
 
 var db = mongoose.connection;
 db.once("open", function() {

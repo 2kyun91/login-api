@@ -39,6 +39,7 @@ util.parseError = function(errors) {
   if(errors.name == "ValidationError") {
     for(var name in errors.errors) {
       var validationError = errors.errors[name];
+      parsed[name] = {message : validationError.message};
     }
   } else if(errors.code == "11000" && errors.errmsg.indexOf("username") > 0) {
     parsed.username = {message : "중복된 사용자명입니다!"};

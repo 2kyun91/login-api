@@ -62,6 +62,8 @@ router.delete("/:username", util.isLoggedin, checkPermission, function(req, res,
   });
 });
 
+module.exports = router;
+
 // Custom function
 function checkPermission(req, res, next) {
   User.findOne({username : req.params.username}, function(err, user) {
@@ -74,5 +76,3 @@ function checkPermission(req, res, next) {
     }
   });
 }
-
-module.exports = router;

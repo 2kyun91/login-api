@@ -44,7 +44,7 @@ router.post("/login", function(req, res, next) {
       var secretOrPrivateKey = process.env.JWT_SECRET;
       var options = {expiresIn : 60 * 60 * 24};
       /*
-      아이디와 비밀번호가 일치함을 확인하 후에 jwt.sign 함수를 통해 token을 생성하여 return한다.
+      아이디와 비밀번호가 일치함을 확인한 후에 jwt.sign 함수를 통해 token을 생성하여 return한다.
       jwt.sign 함수는 4개의 파라미터를 전달받는다.
 
       - payload : token에 저장될 정보이다. 로그인용으로 사용되는 경우 DB에서 유저를 특정할 수 있는 간결한 정보를 담고 개인정보는 저장해선 안된다.
